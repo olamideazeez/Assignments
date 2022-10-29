@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin: 20px 0px;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all .5s ease;
+}
+
+.navbar a:hover {
+    background-color: whitesmoke;
+    color: black;
+    box-shadow: (0, 0, 10px, whitesmoke );
+}
+
+#home{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 840px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#home ::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(./images/IMG_4469.jpeg) no-repeat center center/cover;
+    height: 900px;
+    width: 100%;
+    z-index: -1;
+    opacity: .8;
+}
+
+.hmie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+}
+
+.headings {
+    font-family: cursive;
+    font-size: 3rem;
+    text-align: center;
+    margin: 40px 0px;
+}  
+.homey p{
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.homeyb {
+    padding: 10px 35px;
+    background-color: transparent;
+    border: 1px solid white;
+    outline: none;
+    transition: 0.6s ease;
+}
+
+.homeyb:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
+}
+
+#about{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 50px;
+
+}
+
+#pic {
+    display: flex;
+}
+
+#pic img{
+    width: 576px;
+    height: 400px;
+}
+
+#intro{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 10px;
+}
+
+#intro h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#portfolio{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+.gallery img{
+    width: 360px;
+    height: 240px;
+    margin: 10px;
+}
+
+#services{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 450px;
+    border: 1px solid black;
+    margin: 10px;
+    align-items: center;
+    text-align: justify;
+    padding: 10px;
+    border-radius: 14px;
+    background: linear-gradient(to top, rgb(255,45,45) 50%, white 50%);
+    background-size: 100% 200%;
+    transition: all .8s;
+}
+
+.box:hover{
+    background-position: left bottom;
+    color: white;
+    border: none;
+    box-shadow: 0 0 20;
+}
+
+#contact{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 20px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.input{
+    padding: 12px;
+    margin: 15px;
+    width: 30%;
+    border: none;
+    outline: none;
+}
+
+#msg{
+    width: 20%;
+    padding: 10px;
+    margin: 15px;
+    border: none;
+    outline: none;
+}
+
+#send {
+    padding: 10px;
+    width: 10%;
+    margin: 40px;
+    border: none;
+    outline: none;
+}
+
+#send:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px;
+}
+
+
+@media (max-width: 799px){
+    .navbar ul{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .heading{
+        font-size: 2.5rem;
+    }
+
+    #pic{
+        flex-direction: column;
+        align-content: center;
+    }
+    
+    #pic img{
+        width: 475px;
+        height: 300px;
+    }
+
+    #intro h2{
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .input, #msg{
+        width: 60%; 
+    }
+
+    #send{
+        width: 20%;
+    }
+   }
+
+   
+@media (max-width: 530px){
+
+    #home{
+        height: 820px;
+    }
+   
+
+    .heading{
+        font-size: 1.7rem;
+    }
+
+    #pic img{
+        width: 300px;
+        height: 175px;
+    }
+
+    #intro h2{
+       font-size: 1.5rem;
+    }
+    
+    .gallery img{
+         width: 250;
+         height: 150px;
+         margin: 10px;
+    }
+   }
